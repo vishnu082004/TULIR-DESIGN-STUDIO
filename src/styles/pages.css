@@ -58,6 +58,14 @@
   justify-content: center;
   gap: 12px;
 }
+.services-page .page-hero--services .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
 .page-hero-eyebrow {
   margin: 0 0 10px;
   color: var(--color-primary-light);
@@ -90,14 +98,6 @@
   transform: translateX(-50%);
 }
 
-.page-hero--services .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 36px;
-}
-.services-page .page-hero-heading-group,
-.services-page .page-hero-side-group { min-width: 0; }
 .services-page { background-color: #e9e6e0; }
 .services-page .page-hero--services {
   background-image: linear-gradient(rgba(32, 30, 29, .88), rgba(28, 27, 26, .91)), url('/images/service-3d.webp');
@@ -113,20 +113,24 @@
   background-size: cover;
   background-attachment: fixed;
 }
-.services-page .page-hero-heading-group { flex: 1 1 54%; }
-.services-page .page-hero-side-group {
-  flex: 0 1 42%;
-}
-.services-page .page-hero-side-group .page-hero-eyebrow { color: rgba(255, 255, 255, .78); }
-
 .page-hero--services .page-hero-title {
-  flex: 1 1 54%;
-  color: #fff;
-  text-align: left;
-  font-size: clamp(2.25rem, 5vw, 3.8rem);
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 14px;
+  color: #e3b583;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 600;
+  letter-spacing: -.045em;
+  text-shadow: 0 5px 28px rgba(0, 0, 0, .28);
+}
+.services-page .page-hero-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 58px;
+  height: 2px;
+  background: var(--color-primary);
+  transform: translateX(-50%);
 }
 
 .page-hero-side-title {
@@ -517,9 +521,6 @@
     min-height: 270px;
     padding: 32px 0;
   }
-  .page-hero--services .container { gap: 22px; }
-  .services-page .page-hero--services .page-hero-title { font-size: clamp(2.7rem, 9vw, 4rem); }
-  .services-page .page-hero-side-title { font-size: clamp(1.25rem, 4.5vw, 2rem); }
   .services-page .page-hero-eyebrow { font-size: .68rem; letter-spacing: .16em; }
   .about-page .about-page-summary { padding-bottom: 42px; }
   .why-choose-us { padding: 48px 0 56px; }
@@ -539,11 +540,6 @@
 }
 
 @media (max-width: 560px) {
-  .page-hero--services .container { flex-direction: column; align-items: flex-start; }
-  .services-page .page-hero-heading-group,
-  .services-page .page-hero-side-group { flex: auto; width: 100%; }
-  .services-page .page-hero-side-group { margin-top: 2px; }
-  .services-page .page-hero-side-title { text-align: left; }
   .principles-section--services .principles-grid,
   .contact-methods { grid-template-columns: 1fr; }
   .contact-page .contact--page .contact-methods { grid-template-columns: 1fr; gap: 14px; }
