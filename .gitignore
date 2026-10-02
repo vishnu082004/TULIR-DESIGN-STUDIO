@@ -1,4 +1,4 @@
-node_modules/
+/node_modules/
 .npm/
 .vite/
 
@@ -29,4 +29,3 @@ Thumbs.db
 *.swp
 *.swo
 *~
-
